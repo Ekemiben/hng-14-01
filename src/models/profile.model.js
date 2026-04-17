@@ -1,8 +1,7 @@
-// src/models/profile.model.js
 import mongoose from "mongoose";
 
 const profileSchema = new mongoose.Schema({
-  id: { type: String, required: true, unique: true }, // UUID v7
+  id: { type: String, required: true, unique: true },
   name: { type: String, required: true, unique: true },
 
   gender: String,
@@ -15,7 +14,7 @@ const profileSchema = new mongoose.Schema({
   country_id: String,
   country_probability: Number,
 
-  created_at: { type: Date, default: () => new Date() }
+  created_at: { type: String }
 });
 
 export default mongoose.model("Profile", profileSchema);
